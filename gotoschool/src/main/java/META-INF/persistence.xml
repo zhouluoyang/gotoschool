@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+
+    <persistence-unit name="NewPersistenceUnit">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <class>com.ggs.domain.Activity</class>
+        <class>com.ggs.domain.AuthenticationInfo</class>
+        <class>com.ggs.domain.Authority</class>
+        <class>com.ggs.domain.Bookinfo</class>
+        <class>com.ggs.domain.ClassDate</class>
+        <class>com.ggs.domain.Comment</class>
+        <class>com.ggs.domain.DonateBook</class>
+        <class>com.ggs.domain.DonatePeriod</class>
+        <class>com.ggs.domain.Integral</class>
+        <class>com.ggs.domain.Poolschoolinfo</class>
+        <class>com.ggs.domain.PublicAd</class>
+        <class>com.ggs.domain.Role</class>
+        <class>com.ggs.domain.Subscription</class>
+        <class>com.ggs.domain.Suggest</class>
+        <class>com.ggs.domain.TUser</class>
+        <class>com.ggs.domain.UserHasPermission</class>
+        <class>com.ggs.domain.UserHasRole</class>
+        <class>com.ggs.domain.UserIntegral</class>
+        <class>com.ggs.domain.UserJoinActivity</class>
+        <class>com.ggs.domain.UserLikeActivity</class>
+        <class>com.ggs.domain.UserLikeComment</class>
+        <properties>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/gotoschool"/>
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+            <property name="hibernate.connection.username"/>
+            <property name="hibernate.connection.password"/>
+            <property name="hibernate.archive.autodetection" value="class"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hbm2ddl.auto" value="update"/>
+        </properties>
+    </persistence-unit>
+</persistence>
