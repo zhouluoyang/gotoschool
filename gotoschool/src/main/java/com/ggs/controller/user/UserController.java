@@ -1,11 +1,12 @@
-package com.ggs.controller;
+package com.ggs.controller.user;
 
-import com.ggs.dao.UserRepository;
+import com.ggs.dao.user.UserRepository;
 import com.ggs.domain.TUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -18,5 +19,11 @@ public class UserController {
     @RequestMapping("/getAllUser")
     public List<TUser> getAllUser(){
         return userRepository.findAll();
+    }
+
+    @RequestMapping("/saveUser")
+    public void saveUser(TUser user){
+        user.setCreatetime(new Date());
+        userRepository.save(user);
     }
 }

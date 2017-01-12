@@ -1,4 +1,4 @@
-package com.ggs.dao;
+package com.ggs.dao.user;
 
 import com.ggs.domain.TUser;
 import org.springframework.data.jpa.repository.JpaRepository;
